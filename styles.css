@@ -1,0 +1,26 @@
+.enter-price-container {
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    width: 33%;
+    margin: auto;
+}
+
+.grid-item {
+    border: 1px solid black;
+    padding: 10px
+}
+
+.title-row {
+    color: rgb(112, 112, 255);
+    font-style: bold;
+    font-size: large;
+}
+
+.breakeven-calc {
+    font-size: small;
+}
