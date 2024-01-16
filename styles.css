@@ -1,24 +1,114 @@
-.enter-price-container {
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
     text-align: center;
+    margin-top: 10px;
+}
+
+.container {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 175px 175px 175px;
     text-align: center;
-    width: 33%;
-    margin: auto;
+    max-width: 45%;
 }
-
+    
 .grid-item {
     border: 1px solid black;
-    padding: 10px
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.input-container {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 90%;
+}
+
+.grid-row {
+    display: flex;
+    align-items: center;
+}
+
+.input-label {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-left: 3px;
+    position: absolute;
+    text-align: left;
+    cursor: text;
+    transition: transform 200ms ease-in, font-size 200ms ease-in, background-color 200ms ease-in;
+}
+
+.input-form:focus ~ .input-label, .input-form:not(:placeholder-shown).input-form:not(:focus) ~ .input-label {
+    transform: translate(0.25rem, -1.2rem);
+    font-size: .7rem;
+    background-color: white;
+}
+
+.input-form {
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    padding: 9px;
+}
+
+.input-form:focus {
+    border-color: rgb(112, 112, 255);
+}
+
+.calculate-button {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 5px;
+    border-radius: 0.5rem;
+    border: 2px solid black;
+    transition: background-color 200ms ease-in, color 200ms ease-in;
+}
+
+.calculate-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.red-warning {
+    color: red;
+    text-align: center;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 .title-row {
     color: rgb(112, 112, 255);
     font-style: bold;
     font-size: large;
+}
+
+#breakeven {
+    min-height: 60px;
 }
 
 .breakeven-calc {
@@ -28,4 +118,63 @@
 .info {
     margin-top: 25px;
     text-align: center;
+}
+
+.enter-price-container {
+    padding-left: 15px;
+}
+
+.enter-price-container input {
+    margin-left: 20px;
+}
+
+tr {
+    border-bottom: 1px solid black;
+}
+
+.input-label::after {
+    content: attr(aria-label);
+}
+
+@media(max-width:1400px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .form-container {
+        width: 100%;
+        margin: auto;
+        position: relative;
+    }
+
+    .input-container {
+        height: 400px;
+        width: 100%;
+        margin: auto;
+        position: relative;
+    }
+
+    .grid-row {
+        margin: auto;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        max-width: 50%;
+    }
+}
+
+@media(max-width:800px) {
+    .grid-container {
+        max-width: 100%;
+    }
 }

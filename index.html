@@ -8,37 +8,62 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="enter-price-container">
-        enter property price: <input type="text" id="propertyPrice" value = "1346800">
-        <button id="calculateButton" onclick="calculate()">calculate</button>
-    </div>
+    <h1 class="title">
+        SBA vs. Conventional Loan
+    </h1>
     <div class="container">
+        <div class="form-container">
+            <div class="input-container">
+                <div class="grid-row">
+                    <input type="text" id="propertyPrice" class="input-form" placeholder=" " />
+                    <label for="propertyPrice" class="input-label">Property Price</label>
+                </div>
+                <div class="grid-row">
+                    <input type="text" id="tenentImprovement" class="input-form" placeholder=" "/>
+                    <label for="tenentImprovement" class="input-label">Tenent Improvement</label>
+                </div>
+                <div class="grid-row">
+                    <input type="text" id="equipmentPurchase" class="input-form" placeholder=" "/>
+                    <label for="equipmentPurchase" class="input-label">Equipment Purchase</label>
+                </div>
+                <div class="grid-row">
+                    <input type="text" id="moving" class="input-form" placeholder=" "/>
+                    <label for="moving" class="input-label">Moving Expenses</label>
+                </div>
+                <div class="grid-row">
+                <input type="text" id="workingCapital" class="input-form" placeholder=" "/>
+                <label for="workingCapital" class="input-label">Working Capital</label>
+                </div>
+                <button class="calculate-button" onclick="calculate()">Calculate</button>
+                <div class="red-warning hidden" id="warning">please fill form</div>
+            </div>
+        </div>
         <div class="grid-container">
             <div class="grid-item"></div>
-            <div class="grid-item">100% SBA</div>
-            <div class="grid-item">80% Conventional</div>
-            <div class="grid-item title-row">Cash Injection</div>
+            <div class="grid-item"><b>100% SBA</b></div>
+            <div class="grid-item"><b>80% Conventional</b></div>
+            <div class="grid-item title-row"><b>Cash Injection</b></div>
             <div class="grid-item">$10,000</div>
             <div class="grid-item" id="cashInjectionConv"></div>
-            <div class="grid-item title-row">Loan Amount</div>
+            <div class="grid-item title-row"><b>Loan Amount</b></div>
             <div class="grid-item" id="sbaLoanAmount"></div>
             <div class="grid-item" id="convLoanAmount"></div>
-            <div class="grid-item title-row">Monthly Payment</div>
+            <div class="grid-item title-row"><b>Monthly Payment</b></div>
             <div class="grid-item" id="sbaMonthlyPayment"></div>
             <div class="grid-item" id="convMonthlyPayment"></div>
-            <div class="grid-item title-row" id="breakeven"><div>Breakeven <br/></div><div class="breakeven-calc" id="breakevenCalc"></div></div>
+            <div class="grid-item title-row" id="breakeven"><div><b>Breakeven</b> <br/></div><div class="breakeven-calc" id="breakevenCalc">‎</div></div>
             <div class="grid-item">N/A</div>
             <div class="grid-item" id="convBreakeven"></div>
-            <div class="grid-item title-row">EBITDA</div>
+            <div class="grid-item title-row"><b>EBITDA</b></div>
             <div class="grid-item">Need formula</div>
             <div class="grid-item">Need formula</div>
-            <div class="grid-item title-row big-text">20% equity thru principal reduction and 4.3% appreciation</div>
+            <div class="grid-item title-row big-text"><b>20% equity thru principal reduction and 4.3% appreciation</b></div>
             <div class="grid-item">Need Formula</div>
             <div class="grid-item">N/A <br /> (20% equity from cash injection)</div>        
         </div>
-        <div class="info">
-            SBA is calculated with 25 year loan term and 10.75% interest rate <br /> Conventional is calculated with 25 year loan term and 7.35% interest rate
-        </div>
-    </div>   
+    </div>
+    <div class="info">
+        SBA is calculated with 25 year loan term and 10.75% interest rate <br /> Conventional is calculated with 25 year loan term and 7.35% interest rate
+    </div>
 </body>
 </html>
