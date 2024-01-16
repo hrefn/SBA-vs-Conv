@@ -35,6 +35,7 @@
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
+    max-width: 175px;
 }
 
 .input-container {
